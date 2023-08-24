@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-import {plants, updatePlants} from './plantData.js';
+import {plants, updatePlants} from './public/plantData.js';
 
 /** @type {Number} */
 let idCounter = plants.length;
