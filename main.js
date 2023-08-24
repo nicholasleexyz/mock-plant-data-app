@@ -1,11 +1,14 @@
 /* eslint-disable max-len */
-import {plants, updatePlants} from './public/plantData.js';
+import {plants, updatePlants} from './plantData.js';
+import {Modal} from 'bootstrap/dist/js/bootstrap.bundle.js';
+import jQuery from 'jquery/dist/jquery.js';
+window.$ = window.jQuery = jQuery;
 
 /** @type {Number} */
 let idCounter = plants.length;
 
 /** @type {bootstrap.Modal} */
-const modal = new bootstrap.Modal(document.getElementById('modalEditEntry'));
+const modal = new Modal(document.getElementById('modalEditEntry'));
 
 /** @type {JQuery<HTMLInputElement>} */
 const commonNameInput = $('#common-name-input');
