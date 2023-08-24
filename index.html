@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 12 - CRUD APP</title>
+
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script defer src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="index.js" type="module"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="d-flex justify-content-start">
+      <span class="h1 m-5">Plants</span>
+      <a class="btn btn-primary btn-lg m-auto" id="btn-new-entry">New Entry</a>
+    </div>
+
+    <div id="entries" class="d-flex flex-wrap">
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalEditEntry" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Entry</h5>
+        </div>
+        <form>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="common-name" class="form-label">Common Name</label>
+              <input type="text" class="form-control" id="common-name-input" aria-describedby="plant common name"
+                placeholder="Sun Flower">
+            </div>
+            <div class="mb-3">
+              <label for="scientific-name" class="form-label">Scientfic Name</label>
+              <input type="text" class="form-control" id="scientific-name-input" placeholder="Sun Flowerium">
+            </div>
+            <div class="mb-3">
+              <label for="family" class="form-label">Plant Family</label>
+              <input type="text" class="form-control" id="family-input" placeholder="asteracie">
+            </div>
+            <div class="mb-3">
+              <label for="family" class="form-label">Description</label>
+              <input type="text" class="form-control input-lg" id="description-input"
+                placeholder="Sun Flowers are pretty cool.">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <a class="btn btn-secondary" data-bs-dismiss="modal">Close</a>
+            <a class="btn btn-primary" id="btn-save">Save</a>
+          </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+
+</html>
